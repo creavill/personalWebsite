@@ -111,7 +111,7 @@ const PersonalWebsite = () => {
           <div className="relative z-10">
             <div className="w-40 h-40 mx-auto mb-12 rounded-3xl overflow-hidden border-4 border-amber-400/30 shadow-2xl shadow-amber-400/20 bg-gradient-to-br from-gray-800 to-emerald-900/50">
               <img 
-                src="/api/placeholder/160/160" 
+                src="https://conner-reavill-images.s3.us-east-2.amazonaws.com/headshot.webp" 
                 alt="Conner Reavill professional headshot"
                 className="w-full h-full object-cover"
               />
@@ -203,14 +203,14 @@ const PersonalWebsite = () => {
                   <div className="absolute -inset-1 bg-gradient-to-r from-emerald-600/40 to-teal-600/40 rounded-3xl blur opacity-40 group-hover:opacity-70 transition duration-500"></div>
                   <div className="relative bg-gradient-to-br from-gray-800 to-emerald-900/30 rounded-3xl overflow-hidden border border-emerald-700/30">
                     <img 
-                      src="/api/placeholder/300/180" 
+                      src="https://conner-reavill-images.s3.us-east-2.amazonaws.com/travel/japan.webp" 
                       alt="Traditional temple in Japan"
-                      className="w-full h-36 object-cover opacity-90"
+                      className="w-full h-40 object-cover"
                     />
-                    <div className="p-4 bg-gradient-to-t from-gray-900/90 to-transparent">
+                    <div className="p-3">
                       <div className="flex items-center">
                         <Leaf className="text-emerald-400 mr-2" size={16} />
-                        <p className="text-sm text-stone-300 font-bold uppercase tracking-wide">Temples & Culture in Japan</p>
+                        <p className="text-xs text-stone-300 font-bold uppercase tracking-wide">Temples & Culture in Japan</p>
                       </div>
                     </div>
                   </div>
@@ -220,14 +220,14 @@ const PersonalWebsite = () => {
                   <div className="absolute -inset-1 bg-gradient-to-r from-amber-600/40 to-orange-600/40 rounded-3xl blur opacity-40 group-hover:opacity-70 transition duration-500"></div>
                   <div className="relative bg-gradient-to-br from-gray-800 to-amber-900/30 rounded-3xl overflow-hidden border border-amber-700/30">
                     <img 
-                      src="/api/placeholder/300/180" 
-                      alt="Surfing barrels in Indonesia"
-                      className="w-full h-36 object-cover opacity-90"
+                      src="https://conner-reavill-images.s3.us-east-2.amazonaws.com/travel/indonesia.webp" 
+                      alt="Surfing waves in Indonesia"
+                      className="w-full h-40 object-cover"
                     />
-                    <div className="p-4 bg-gradient-to-t from-gray-900/90 to-transparent">
+                    <div className="p-3">
                       <div className="flex items-center">
                         <Sunset className="text-amber-400 mr-2" size={16} />
-                        <p className="text-sm text-stone-300 font-bold uppercase tracking-wide">Perfect Barrels in Indonesia</p>
+                        <p className="text-xs text-stone-300 font-bold uppercase tracking-wide">Perfect Waves in Indonesia</p>
                       </div>
                     </div>
                   </div>
@@ -339,8 +339,8 @@ const PersonalWebsite = () => {
             </span>
           </h2>
           
-          <div className="grid lg:grid-cols-3 gap-12">
-            <div className="lg:col-span-2">
+          <div className="grid lg:grid-cols-4 gap-8">
+            <div className="lg:col-span-3">
               <p className="text-xl text-stone-300 mb-8 leading-relaxed font-light">
                 What started as a passion for surfing naturally evolved into the art and science of board shaping. Working with foam, fiberglass, and resin, I craft custom surfboards and provide ding repair services in my spare time.
               </p>
@@ -378,45 +378,45 @@ const PersonalWebsite = () => {
               </div>
             </div>
             
-            <div className="space-y-6">
+            <div className="lg:col-span-1 space-y-6">
               <div className="group relative">
-                <div className="absolute -inset-1 bg-gradient-to-r from-emerald-600/40 to-teal-600/40 rounded-3xl blur opacity-40 group-hover:opacity-70 transition duration-500"></div>
-                <div className="relative rounded-3xl overflow-hidden border border-emerald-700/30 bg-gray-800">
+                <div className="absolute -inset-1 bg-gradient-to-r from-emerald-600/40 to-teal-600/40 rounded-2xl blur opacity-40 group-hover:opacity-70 transition duration-500"></div>
+                <div className="relative rounded-2xl overflow-hidden border border-emerald-700/30 bg-gray-800">
                   <img 
-                    src="/api/placeholder/300/250" 
-                    alt="Custom surfboard being shaped in workshop"
-                    className="w-full h-48 object-cover opacity-90"
+                    src="https://conner-reavill-images.s3.us-east-2.amazonaws.com/surfboards/board-1.webp" 
+                    alt="In the shaping bay"
+                    className="w-full h-48 object-cover"
                   />
-                  <div className="p-4 bg-gradient-to-t from-gray-900/90 to-transparent">
+                  <div className="p-3">
                     <p className="text-xs text-stone-300 font-bold uppercase tracking-wider">Custom longboard taking shape</p>
                   </div>
                 </div>
               </div>
               
               <div className="group relative">
-                <div className="absolute -inset-1 bg-gradient-to-r from-teal-600/40 to-emerald-600/40 rounded-3xl blur opacity-40 group-hover:opacity-70 transition duration-500"></div>
-                <div className="relative rounded-3xl overflow-hidden border border-teal-700/30 bg-gray-800">
+                <div className="absolute -inset-1 bg-gradient-to-r from-teal-600/40 to-emerald-600/40 rounded-2xl blur opacity-40 group-hover:opacity-70 transition duration-500"></div>
+                <div className="relative rounded-2xl overflow-hidden border border-teal-700/30 bg-gray-800">
                   <img 
-                    src="/api/placeholder/300/200" 
+                    src="https://conner-reavill-images.s3.us-east-2.amazonaws.com/surfboards/board-2.webp" 
                     alt="Surfboard shaping tools and workspace"
-                    className="w-full h-40 object-cover opacity-90"
+                    className="w-full h-48 object-cover"
                   />
-                  <div className="p-4 bg-gradient-to-t from-gray-900/90 to-transparent">
-                    <p className="text-xs text-stone-300 font-bold uppercase tracking-wider">Tools & workspace</p>
+                  <div className="p-3">
+                    <p className="text-xs text-stone-300 font-bold uppercase tracking-wider">A custom midlength for a client</p>
                   </div>
                 </div>
               </div>
               
               <div className="group relative">
-                <div className="absolute -inset-1 bg-gradient-to-r from-amber-600/40 to-orange-600/40 rounded-3xl blur opacity-40 group-hover:opacity-70 transition duration-500"></div>
-                <div className="relative rounded-3xl overflow-hidden border border-amber-700/30 bg-gray-800">
+                <div className="absolute -inset-1 bg-gradient-to-r from-amber-600/40 to-orange-600/40 rounded-2xl blur opacity-40 group-hover:opacity-70 transition duration-500"></div>
+                <div className="relative rounded-2xl overflow-hidden border border-amber-700/30 bg-gray-800">
                   <img 
-                    src="/api/placeholder/300/200" 
+                    src="https://conner-reavill-images.s3.us-east-2.amazonaws.com/surfboards/board-3.webp" 
                     alt="Finished surfboards lined up ready for delivery"
-                    className="w-full h-40 object-cover opacity-90"
+                    className="w-full h-48 object-cover"
                   />
-                  <div className="p-4 bg-gradient-to-t from-gray-900/90 to-transparent">
-                    <p className="text-xs text-stone-300 font-bold uppercase tracking-wider">Ready for first waves</p>
+                  <div className="p-3">
+                    <p className="text-xs text-stone-300 font-bold uppercase tracking-wider">Custom 9 fotot log for the central coast</p>
                   </div>
                 </div>
               </div>
@@ -446,11 +446,11 @@ const PersonalWebsite = () => {
                 
                 <div className="mb-6 rounded-2xl overflow-hidden border border-emerald-600/30">
                   <img 
-                    src="/api/placeholder/400/250" 
+                    src="/api/placeholder/400/240" 
                     alt="Wave-Finder AWS architecture diagram showing data flow"
-                    className="w-full h-48 object-cover opacity-90"
+                    className="w-full h-48 object-cover"
                   />
-                  <div className="p-4 bg-gradient-to-t from-gray-900/90 to-transparent">
+                  <div className="p-4">
                     <p className="text-xs text-stone-300 font-bold uppercase tracking-wider">AWS Architecture for Scalable Surf Forecasting</p>
                   </div>
                 </div>
