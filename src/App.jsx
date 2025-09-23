@@ -382,11 +382,13 @@ const PersonalWebsite = () => {
               <div className="group relative">
                 <div className="absolute -inset-1 bg-gradient-to-r from-emerald-600/40 to-teal-600/40 rounded-2xl blur opacity-40 group-hover:opacity-70 transition duration-500"></div>
                 <div className="relative rounded-2xl overflow-hidden border border-emerald-700/30 bg-gray-800">
-                  <img 
-                    src="https://conner-reavill-images.s3.us-east-2.amazonaws.com/surfboards/board-1.webp" 
-                    alt="In the shaping bay"
-                    className="w-full h-48 object-cover"
-                  />
+                  <div className="h-48 overflow-hidden">
+                    <img 
+                      src="https://conner-reavill-images.s3.us-east-2.amazonaws.com/surfboards/board-1.webp" 
+                      alt="In the shaping bay"
+                      className="w-full h-full object-contain bg-gradient-to-br from-gray-900 to-emerald-900/20"
+                    />
+                  </div>
                   <div className="p-3">
                     <p className="text-xs text-stone-300 font-bold uppercase tracking-wider">Custom longboard taking shape</p>
                   </div>
@@ -396,11 +398,13 @@ const PersonalWebsite = () => {
               <div className="group relative">
                 <div className="absolute -inset-1 bg-gradient-to-r from-teal-600/40 to-emerald-600/40 rounded-2xl blur opacity-40 group-hover:opacity-70 transition duration-500"></div>
                 <div className="relative rounded-2xl overflow-hidden border border-teal-700/30 bg-gray-800">
-                  <img 
-                    src="https://conner-reavill-images.s3.us-east-2.amazonaws.com/surfboards/board-2.webp" 
-                    alt="Surfboard shaping tools and workspace"
-                    className="w-full h-48 object-cover"
-                  />
+                  <div className="h-48 overflow-hidden">
+                    <img 
+                      src="https://conner-reavill-images.s3.us-east-2.amazonaws.com/surfboards/board-2.webp" 
+                      alt="Surfboard shaping tools and workspace"
+                      className="w-full h-full object-contain bg-gradient-to-br from-gray-900 to-teal-900/20"
+                    />
+                  </div>
                   <div className="p-3">
                     <p className="text-xs text-stone-300 font-bold uppercase tracking-wider">A custom midlength for a client</p>
                   </div>
@@ -410,13 +414,15 @@ const PersonalWebsite = () => {
               <div className="group relative">
                 <div className="absolute -inset-1 bg-gradient-to-r from-amber-600/40 to-orange-600/40 rounded-2xl blur opacity-40 group-hover:opacity-70 transition duration-500"></div>
                 <div className="relative rounded-2xl overflow-hidden border border-amber-700/30 bg-gray-800">
-                  <img 
-                    src="https://conner-reavill-images.s3.us-east-2.amazonaws.com/surfboards/board-3.webp" 
-                    alt="Finished surfboards lined up ready for delivery"
-                    className="w-full h-48 object-cover"
-                  />
+                  <div className="h-48 overflow-hidden">
+                    <img 
+                      src="https://conner-reavill-images.s3.us-east-2.amazonaws.com/surfboards/board-3.webp" 
+                      alt="Finished surfboards lined up ready for delivery"
+                      className="w-full h-full object-contain bg-gradient-to-br from-gray-900 to-amber-900/20"
+                    />
+                  </div>
                   <div className="p-3">
-                    <p className="text-xs text-stone-300 font-bold uppercase tracking-wider">Custom 9 fotot log for the central coast</p>
+                    <p className="text-xs text-stone-300 font-bold uppercase tracking-wider">Custom 9 foot log for the central coast</p>
                   </div>
                 </div>
               </div>
@@ -441,17 +447,24 @@ const PersonalWebsite = () => {
               <div className="relative p-8 bg-gradient-to-br from-emerald-900/40 to-amber-900/40 rounded-3xl border border-emerald-600/30 backdrop-blur-sm shadow-2xl">
                 <div className="flex items-center justify-between mb-6">
                   <h3 className="text-3xl font-black text-emerald-400 uppercase tracking-wider">Wave-Finder</h3>
-                  <ExternalLink className="text-stone-400 hover:text-emerald-400 transition-colors" size={24} />
+                  <a 
+                    href="https://thewavefinder.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-stone-400 hover:text-emerald-400 transition-colors"
+                  >
+                    <ExternalLink size={24} />
+                  </a>
                 </div>
                 
                 <div className="mb-6 rounded-2xl overflow-hidden border border-emerald-600/30">
                   <img 
-                    src="/api/placeholder/400/240" 
-                    alt="Wave-Finder AWS architecture diagram showing data flow"
+                    src="https://conner-reavill-images.s3.us-east-2.amazonaws.com/wavefinder-architecture.png" 
+                    alt="Wave-Finder AWS architecture diagram showing Route 53, CloudFront, S3, API Gateway, Lambda, Aurora DB, and CI/CD pipeline"
                     className="w-full h-48 object-cover"
                   />
                   <div className="p-4">
-                    <p className="text-xs text-stone-300 font-bold uppercase tracking-wider">AWS Architecture for Scalable Surf Forecasting</p>
+                    <p className="text-xs text-stone-300 font-bold uppercase tracking-wider">Complete AWS Architecture with CI/CD Pipeline</p>
                   </div>
                 </div>
                 
@@ -469,7 +482,7 @@ const PersonalWebsite = () => {
                   </div>
                   <div className="flex items-center text-sm text-stone-400">
                     <span className="w-2 h-2 bg-emerald-400 rounded-full mr-2"></span>
-                    Containerized backend on EC2 with RDS PostgreSQL
+                    Utilizes a Lambda Aurora Serverless MySQL backend
                   </div>
                   <div className="flex items-center text-sm text-stone-400">
                     <span className="w-2 h-2 bg-amber-400 rounded-full mr-2"></span>
