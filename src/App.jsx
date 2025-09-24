@@ -457,19 +457,19 @@ const PersonalWebsite = () => {
                   </a>
                 </div>
                 
-                <div className="mb-6 rounded-2xl overflow-hidden border border-emerald-600/30">
+                <div className="mb-6 rounded-2xl overflow-hidden border border-emerald-600/30 bg-gradient-to-br from-gray-900 to-emerald-900/20">
                   <img 
                     src="https://conner-reavill-images.s3.us-east-2.amazonaws.com/wavefinder-architecture.png" 
                     alt="Wave-Finder AWS architecture diagram showing Route 53, CloudFront, S3, API Gateway, Lambda, Aurora DB, and CI/CD pipeline"
-                    className="w-full h-48 object-cover"
+                    className="w-full h-auto object-contain p-4"
                   />
-                  <div className="p-4">
-                    <p className="text-xs text-stone-300 font-bold uppercase tracking-wider">Complete AWS Architecture with CI/CD Pipeline</p>
+                  <div className="p-4 border-t border-emerald-600/20">
+                    <p className="text-xs text-stone-300 font-bold uppercase tracking-wider text-center">Complete AWS Architecture with CI/CD Pipeline</p>
                   </div>
                 </div>
                 
                 <p className="text-stone-300 mb-6 leading-relaxed">
-                  ML-powered surf forecasting platform built during my world travels. Combines custom ML models trained on oceanographic data with NOAA APIs, deployed using scalable AWS architecture and web scraping techniques.
+                  ML-powered surf forecasting platform built during my world travels. Live at <span className="text-emerald-400 font-semibold">thewavefinder.com</span>, combining custom ML models with NOAA APIs and intelligent web scraping, deployed using enterprise-grade AWS architecture.
                 </p>
                 <div className="space-y-3 mb-8">
                   <div className="flex items-center text-sm text-stone-400">
@@ -478,19 +478,19 @@ const PersonalWebsite = () => {
                   </div>
                   <div className="flex items-center text-sm text-stone-400">
                     <span className="w-2 h-2 bg-amber-400 rounded-full mr-2"></span>
-                    AWS-powered web scraping with intelligent rate limiting
+                    Serverless backend using AWS Lambda with Aurora Serverless database
                   </div>
                   <div className="flex items-center text-sm text-stone-400">
                     <span className="w-2 h-2 bg-emerald-400 rounded-full mr-2"></span>
-                    Utilizes a Lambda Aurora Serverless MySQL backend
+                    React frontend on S3 with CloudFront CDN for global distribution
                   </div>
                   <div className="flex items-center text-sm text-stone-400">
                     <span className="w-2 h-2 bg-amber-400 rounded-full mr-2"></span>
-                    React frontend on S3 with CloudFront CDN
+                    Automated CI/CD with GitHub Actions for zero-downtime deployments
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {['React', 'Python', 'AWS', 'Web Scraping', 'ML', 'PostgreSQL', 'Docker'].map(tech => (
+                  {['React', 'AWS Lambda', 'Aurora DB', 'S3', 'CloudFront', 'Route 53', 'API Gateway', 'GitHub Actions'].map(tech => (
                     <span key={tech} className="px-3 py-1 bg-emerald-400/20 text-emerald-300 rounded-full text-xs font-bold uppercase">
                       {tech}
                     </span>
