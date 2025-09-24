@@ -411,21 +411,6 @@ const PersonalWebsite = () => {
                 </div>
               </div>
               
-              <div className="group relative">
-                <div className="absolute -inset-1 bg-gradient-to-r from-amber-600/40 to-orange-600/40 rounded-2xl blur opacity-40 group-hover:opacity-70 transition duration-500"></div>
-                <div className="relative rounded-2xl overflow-hidden border border-amber-700/30 bg-gray-800">
-                  <div className="h-48 overflow-hidden">
-                    <img 
-                      src="https://conner-reavill-images.s3.us-east-2.amazonaws.com/surfboards/board-3.webp" 
-                      alt="Finished surfboards lined up ready for delivery"
-                      className="w-full h-full object-contain bg-gradient-to-br from-gray-900 to-amber-900/20"
-                    />
-                  </div>
-                  <div className="p-3">
-                    <p className="text-xs text-stone-300 font-bold uppercase tracking-wider">Custom 9 foot log for the central coast</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
