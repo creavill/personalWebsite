@@ -290,7 +290,7 @@ const PersonalWebsite = () => {
               <div className="p-6 bg-gradient-to-br from-emerald-900/60 to-teal-900/60 rounded-3xl border border-emerald-400/30 shadow-xl">
                 <h3 className="font-black text-emerald-400 mb-4 uppercase tracking-wider">Cloud & Infrastructure</h3>
                 <div className="flex flex-wrap gap-2">
-                  {['AWS EC2', 'S3', 'RDS', 'CloudFront', 'Docker', 'Terraform', 'CI/CD'].map(skill => (
+                  {['AWS Lambda','EC2', 'S3', 'RDS', 'CloudFront', 'Docker', 'Terraform', 'CI/CD'].map(skill => (
                     <span key={skill} className="px-3 py-1 bg-emerald-400/20 text-emerald-300 rounded-full text-sm font-medium">
                       {skill}
                     </span>
@@ -490,7 +490,7 @@ const PersonalWebsite = () => {
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {['React', 'AWS Lambda', 'Aurora DB', 'S3', 'CloudFront', 'Route 53', 'API Gateway', 'GitHub Actions'].map(tech => (
+                  {['React', 'AWS Lambda', 'Aurora DB', 'S3', 'CloudFront', 'Route 53', 'API Gateway', 'GitHub Actions', 'EC2', 'Python'].map(tech => (
                     <span key={tech} className="px-3 py-1 bg-emerald-400/20 text-emerald-300 rounded-full text-xs font-bold uppercase">
                       {tech}
                     </span>
