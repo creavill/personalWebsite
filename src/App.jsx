@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ExternalLink, Mail, Phone, Linkedin, Github, MapPin, Award, GraduationCap, Briefcase, ChevronRight, ArrowRight, Download, Cloud, Code, Database, Server, Zap } from 'lucide-react';
+import { Menu, X, ExternalLink, Mail, Phone, Linkedin, Github, MapPin, Award, GraduationCap, Briefcase, ChevronRight, ArrowRight, Download, Cloud, Code, Database, Server, Zap, User } from 'lucide-react';
 
 const PersonalWebsite = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -7,6 +7,7 @@ const PersonalWebsite = () => {
   const [visibleSections, setVisibleSections] = useState(new Set());
 
   const sections = [
+    { id: 'about', label: 'About' },
     { id: 'projects', label: 'Projects' },
     { id: 'experience', label: 'Experience' },
     { id: 'skills', label: 'Skills' },
@@ -100,8 +101,16 @@ const PersonalWebsite = () => {
 
   return (
     <div className="min-h-screen bg-[#0a0a0f] text-[#f5f5f7] overflow-hidden">
+      {/* Skip to main content link for accessibility */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-indigo-500 focus:text-white focus:rounded-lg focus:outline-none"
+      >
+        Skip to main content
+      </a>
+
       {/* Animated Mesh Background */}
-      <div className="fixed inset-0 pointer-events-none mesh-gradient opacity-60"></div>
+      <div className="fixed inset-0 pointer-events-none mesh-gradient opacity-60" aria-hidden="true"></div>
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse-glow"></div>
         <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '2s' }}></div>
@@ -109,23 +118,32 @@ const PersonalWebsite = () => {
       </div>
 
       {/* Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? 'glass border-b border-indigo-500/20 shadow-lg shadow-indigo-500/5' : 'bg-transparent'
-      }`}>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+          scrolled ? 'glass border-b border-indigo-500/20 shadow-lg shadow-indigo-500/5' : 'bg-transparent'
+        }`}
+        role="navigation"
+        aria-label="Main navigation"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            <button onClick={() => scrollToSection('hero')} className="text-2xl font-bold tracking-tight">
+            <button
+              onClick={() => scrollToSection('hero')}
+              className="text-2xl font-bold tracking-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-[#0a0a0f] rounded-lg"
+              aria-label="Go to top of page"
+            >
               <span className="text-indigo-400">CONNER</span>
               <span className="text-cyan-400 ml-2">REAVILL</span>
             </button>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-8" role="menubar">
               {sections.map(({ id, label }) => (
                 <button
                   key={id}
                   onClick={() => scrollToSection(id)}
-                  className="text-sm font-medium text-zinc-400 hover:text-indigo-400 transition-colors duration-300"
+                  className="text-sm font-medium text-zinc-400 hover:text-indigo-400 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-[#0a0a0f] rounded px-2 py-1"
+                  role="menuitem"
                 >
                   {label}
                 </button>
@@ -143,16 +161,19 @@ const PersonalWebsite = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden text-zinc-400 hover:text-indigo-400 p-2 transition-colors"
+              className="md:hidden text-zinc-400 hover:text-indigo-400 p-2 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg"
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-menu"
+              aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
             >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {mobileMenuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden glass border-t border-indigo-500/20">
+          <div id="mobile-menu" className="md:hidden glass border-t border-indigo-500/20" role="menu">
             <div className="px-4 py-4 space-y-2">
               {sections.map(({ id, label }) => (
                 <button
@@ -176,8 +197,9 @@ const PersonalWebsite = () => {
         )}
       </nav>
 
+      <main id="main-content">
       {/* Hero Section */}
-      <section id="hero" className="relative min-h-screen flex items-center justify-center pt-20 px-4 sm:px-6 lg:px-8">
+      <section id="hero" aria-labelledby="hero-title" className="relative min-h-screen flex items-center justify-center pt-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left animate-fade-in-up">
@@ -187,7 +209,7 @@ const PersonalWebsite = () => {
                 </span>
               </div>
 
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+              <h1 id="hero-title" className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
                 <span className="block text-white">CONNER</span>
                 <span className="block gradient-text-indigo-cyan">REAVILL</span>
               </h1>
@@ -251,8 +273,73 @@ const PersonalWebsite = () => {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce" aria-hidden="true">
           <ChevronRight size={24} className="text-zinc-500 rotate-90" />
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" aria-labelledby="about-title" className={`py-24 px-4 sm:px-6 lg:px-8 ${visibleSections.has('about') ? 'animate-fade-in-up' : 'opacity-0'}`}>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="inline-block px-4 py-2 bg-indigo-500/10 border border-indigo-500/30 rounded-full text-indigo-400 text-sm font-medium uppercase tracking-wider mb-4">
+              About Me
+            </span>
+            <h2 id="about-title" className="text-4xl md:text-5xl font-bold gradient-text-indigo-cyan">
+              Who I Am
+            </h2>
+          </div>
+
+          <div className="relative">
+            <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500/10 via-cyan-500/10 to-indigo-500/10 rounded-3xl blur-xl"></div>
+            <div className="relative bg-[#12121a] border border-zinc-800 rounded-3xl p-8 md:p-12">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-12 h-12 bg-indigo-500/20 border border-indigo-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <User className="text-indigo-400" size={24} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-zinc-200 mb-2">The Short Version</h3>
+                  <p className="text-zinc-400 leading-relaxed">
+                    I'm a full-stack developer who loves turning complex problems into elegant, scalable solutions.
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-4 text-zinc-400 leading-relaxed">
+                <p>
+                  After graduating from Cal Poly San Luis Obispo with a BS in Software Engineering, I dove headfirst into the world of cloud architecture and AI-powered applications. My journey has taken me from optimizing mainframe systems at <span className="text-cyan-400 font-medium">Visa</span> to building production React applications and training large language models.
+                </p>
+                <p>
+                  I'm particularly passionate about <span className="text-indigo-400 font-medium">serverless architecture</span> and finding ways to build powerful applications that don't break the bank. My flagship project, Social Spork, processes hundreds of recipes monthly on a ~$75 AWS budget by leveraging event-driven design and smart service selection.
+                </p>
+                <p>
+                  When I'm not coding, you'll find me chasing waves along the San Diego coastline — which actually inspired my ML-powered surf forecasting project, Wave-Finder.
+                </p>
+              </div>
+
+              <div className="mt-8 pt-8 border-t border-zinc-800">
+                <h4 className="text-sm font-semibold text-zinc-500 uppercase tracking-wider mb-4">What I Bring to Teams</h4>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="flex items-center gap-3 text-zinc-300">
+                    <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
+                    End-to-end project ownership
+                  </div>
+                  <div className="flex items-center gap-3 text-zinc-300">
+                    <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                    Cost-conscious architecture decisions
+                  </div>
+                  <div className="flex items-center gap-3 text-zinc-300">
+                    <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
+                    Strong async communication
+                  </div>
+                  <div className="flex items-center gap-3 text-zinc-300">
+                    <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                    Rapid prototyping to production
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -683,8 +770,10 @@ const PersonalWebsite = () => {
         </div>
       </section>
 
+      </main>
+
       {/* Footer */}
-      <footer className="py-8 px-4 border-t border-zinc-800">
+      <footer className="py-8 px-4 border-t border-zinc-800" role="contentinfo">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-sm text-zinc-600">
             © 2025 Conner Reavill • Built with React • Deployed on AWS
