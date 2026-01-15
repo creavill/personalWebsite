@@ -205,7 +205,7 @@ const PersonalWebsite = () => {
             <div className="text-center lg:text-left animate-fade-in-up">
               <div className="mb-6">
                 <span className="inline-block px-4 py-2 bg-indigo-500/10 border border-indigo-500/30 rounded-full text-indigo-400 text-sm font-medium">
-                  Available for Remote Opportunities
+                  Open to Remote & San Diego Opportunities
                 </span>
               </div>
 
@@ -215,11 +215,11 @@ const PersonalWebsite = () => {
               </h1>
 
               <p className="text-xl md:text-2xl text-zinc-300 mb-4 font-light">
-                Full-Stack Developer & Cloud Architect
+                Full-Stack Developer & DevOps Engineer
               </p>
 
               <p className="text-lg text-zinc-500 mb-8 max-w-xl mx-auto lg:mx-0">
-                Building scalable applications with React, AWS, and serverless architecture
+                Building scalable applications with React, AWS, and CI/CD pipelines
               </p>
 
               {/* Credentials */}
@@ -307,13 +307,13 @@ const PersonalWebsite = () => {
 
               <div className="space-y-4 text-zinc-400 leading-relaxed">
                 <p>
-                  After graduating from Cal Poly San Luis Obispo with a BS in Software Engineering, I dove headfirst into the world of cloud architecture and AI-powered applications. My journey has taken me from optimizing mainframe systems at <span className="text-cyan-400 font-medium">Visa</span> to building production React applications and training large language models.
+                  After graduating from Cal Poly San Luis Obispo with a BS in Software Engineering, I dove headfirst into the world of cloud architecture and DevOps. My journey has taken me from optimizing mainframe systems at <span className="text-cyan-400 font-medium">Visa</span> to building production React applications, implementing CI/CD pipelines, and training large language models.
                 </p>
                 <p>
-                  I'm particularly passionate about <span className="text-indigo-400 font-medium">serverless architecture</span> and finding ways to build powerful applications that don't break the bank. My flagship project, Social Spork, processes hundreds of recipes monthly on a ~$75 AWS budget by leveraging event-driven design and smart service selection.
+                  I'm particularly passionate about <span className="text-indigo-400 font-medium">DevOps practices</span> and <span className="text-orange-400 font-medium">infrastructure automation</span> — finding ways to streamline deployments, reduce manual toil, and build reliable systems. My projects feature GitHub Actions workflows, Terraform infrastructure-as-code, and serverless architectures that keep costs low while maintaining high availability.
                 </p>
                 <p>
-                  When I'm not coding, you'll find me chasing waves along the San Diego coastline — which actually inspired my ML-powered surf forecasting project, Wave-Finder.
+                  When I'm not automating deployments or debugging pipelines, you'll find me chasing waves along the San Diego coastline — which actually inspired my ML-powered surf forecasting project, Wave-Finder.
                 </p>
               </div>
 
@@ -322,19 +322,19 @@ const PersonalWebsite = () => {
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="flex items-center gap-3 text-zinc-300">
                     <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
-                    End-to-end project ownership
+                    CI/CD pipeline design & optimization
                   </div>
                   <div className="flex items-center gap-3 text-zinc-300">
                     <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                    Cost-conscious architecture decisions
+                    Infrastructure as Code (Terraform, SAM)
                   </div>
                   <div className="flex items-center gap-3 text-zinc-300">
                     <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
-                    Strong async communication
+                    AWS architecture & cost optimization
                   </div>
                   <div className="flex items-center gap-3 text-zinc-300">
                     <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
-                    Rapid prototyping to production
+                    End-to-end ownership & automation
                   </div>
                 </div>
               </div>
@@ -712,7 +712,7 @@ const PersonalWebsite = () => {
       <section id="contact" className={`py-24 px-4 sm:px-6 lg:px-8 ${visibleSections.has('contact') ? 'animate-fade-in-up' : 'opacity-0'}`}>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold gradient-text-indigo-cyan mb-6">Let's Build Something</h2>
-          <p className="text-xl text-zinc-400 mb-12">Available for remote opportunities</p>
+          <p className="text-xl text-zinc-400 mb-12">Open to DevOps, Cloud, and Full-Stack roles — Remote or San Diego</p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
             <a
